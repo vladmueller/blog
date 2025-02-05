@@ -1,0 +1,11 @@
+name: Deploy Blog to Uberspace
+on:
+  push:
+    branches: [deploy]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      -uses: actions/checkout@v4
+      -name: Deploy using rsync
+      run: echo TODO deploy to uberspace
