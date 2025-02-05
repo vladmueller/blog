@@ -2,3 +2,6 @@ baseURL = 'https://vladmueller.de'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'archie'
+
+[params]
+mode = "dark"
