@@ -1,0 +1,32 @@
+name: Deploy Blog to Uberspace
+on:
+  push:
+    branches: [main, deploy]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true' # Fetch Hugo themes
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: 'true'
+
+      - name: Build website with Hugo
+        run: hugo --minify -D
+
+      - name: Deploy using rsync
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avrh --delete
+          path: ./public/
+          remote_path: /var/www/virtual/${{ vars.SSH_USERNAME }}/vladmueller.de
+          remote_host: ${{ vars.SSH_HOST }}
+          remote_user: ${{ vars.SSH_USERNAME }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          remote_key_pass: ${{ secrets.SSH_PRIVATE_KEY_PASS }} # Only needed if you added a passphrase upon creating the SSH key
