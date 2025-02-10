@@ -25,7 +25,7 @@ sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
 sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
 Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-![birds-2037459_1280.png](/images/birds-2037459_1280.png)
+![birds-2037459_1280.png](/images/birds-2037459_1280.png)}
 
 ![red-apple-1544181_1280.jpg](/images/red-apple-1544181_1280.jpg)
 
