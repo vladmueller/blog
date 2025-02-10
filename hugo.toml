@@ -4,4 +4,4 @@ title = 'My New Hugo Site'
 theme = 'archie'
 
 [params]
-mode = "dark"
+mode = "auto"
