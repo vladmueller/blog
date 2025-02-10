@@ -23,7 +23,7 @@ jobs:
       - name: Deploy using rsync
         uses: burnett01/rsync-deployments@6.0.0
         with:
-          switches: -avrh --delete
+          switches: -avrh --delete --exclude=".htaccess"
           path: ./public/
           remote_path: /var/www/virtual/${{ vars.SSH_USERNAME }}/vladmueller.de
           remote_host: ${{ vars.SSH_HOST }}
