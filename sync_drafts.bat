@@ -1,0 +1,3 @@
+@echo off
+echo Syncing drafts...
+robocopy "C:\Users\vmueller\obsidian-posts" "C:\Users\vmueller\repositories\hugo\vladmueller-blog\content\posts" /E "*.md"
