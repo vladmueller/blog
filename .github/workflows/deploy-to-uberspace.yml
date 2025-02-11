@@ -27,10 +27,10 @@ jobs:
 
       - name: Set Remote Path
         run: |
-          if [[ "${{ github.ref }}" == "refs/heads/draft" ]]; then
-            echo "REMOTE_PATH=/var/www/virtual/${{ vars.SSH_USERNAME }}/draft.vladmueller.de" >> $GITHUB_ENV
-          else
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
             echo "REMOTE_PATH=/var/www/virtual/${{ vars.SSH_USERNAME }}/vladmueller.de" >> $GITHUB_ENV
+          else
+            echo "REMOTE_PATH=/var/www/virtual/${{ vars.SSH_USERNAME }}/draft.vladmueller.de" >> $GITHUB_ENV
           fi
 
       - name: Deploy using rsync
