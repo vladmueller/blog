@@ -1,7 +1,7 @@
 name: Deploy Blog to Uberspace
 on:
   push:
-    branches: [main, deploy]
+    branches: [main, deploy, draft]
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,14 +18,27 @@ jobs:
           extended: 'true'
 
       - name: Build website with Hugo
-        run: hugo --minify -D
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            hugo --minify
+          else
+            hugo --minify -D
+          fi
+
+      - name: Set Remote Path
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "REMOTE_PATH=/var/www/virtual/${{ vars.SSH_USERNAME }}/vladmueller.de" >> $GITHUB_ENV
+          else
+            echo "REMOTE_PATH=/var/www/virtual/${{ vars.SSH_USERNAME }}/draft.vladmueller.de" >> $GITHUB_ENV
+          fi
 
       - name: Deploy using rsync
         uses: burnett01/rsync-deployments@6.0.0
         with:
-          switches: -avrh --delete
+          switches: -avrh --delete --exclude=".htaccess"
           path: ./public/
-          remote_path: /var/www/virtual/${{ vars.SSH_USERNAME }}/vladmueller.de
+          remote_path: ${{ env.REMOTE_PATH }}
           remote_host: ${{ vars.SSH_HOST }}
           remote_user: ${{ vars.SSH_USERNAME }}
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
