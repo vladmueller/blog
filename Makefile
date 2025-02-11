@@ -8,7 +8,8 @@ ifeq ($(OS),Windows_NT)
 	find "$(HUGO_POSTS)" -type f -name "*.md" -exec sed -i -E "s/!\[\[([^]]+)\]\]/![\1]\(\/images\/\1\)/g" {} +
 else
 	@echo "Running on macOS or Linux"
-	rsync -avu "$(OBSIDIAN_POSTS)/" "$(HUGO_POSTS)/"
+	rsync -avu --include='*.md' --exclude='*' "$(OBSIDIAN_POSTS)/" "$(HUGO_POSTS)/"
+	rsync -avu "$(OBSIDIAN_POSTS_RESOURCES)/" "$(HUGO_POSTS_RESOURCES)/"
 	find $(HUGO_POSTS) -type f -name "*.md" -exec sed -i '' -E 's/!\[\[([^]]+)\]\]/![\1]\(\/images\/\1\)/g' {} +
 endif
 
