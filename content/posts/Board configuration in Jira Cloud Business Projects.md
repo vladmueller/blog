@@ -15,7 +15,7 @@ You want track some tasks and work which has to be done ..
 introduce a higher level hierarchy
 but then you realize that you can not configure the board
 
-![[jira-cloud-no-board-configuration-in-jira-workmanagement-projects.png]]
+![jira-cloud-no-board-configuration-in-jira-workmanagement-projects.png](/images/jira-cloud-no-board-configuration-in-jira-workmanagement-projects.png)
 
 Basically the initial board setup is different for every project type:
 
@@ -33,28 +33,28 @@ Create a second Kanban board manually and create a link to it in your business p
 
 > Note to `Rank`: **TODO**
 
-![[Pasted image 20250129154619.png]]
+![Pasted image 20250129154619.png](/images/Pasted image 20250129154619.png)
 
 2. Click on `Save filter` and name it: `Filter for <YOUR-PROJECT_KEY> board` (which is the default naming convention for boards in Jira, if you want to stick to it) 
 
-![[Pasted image 20250129155041.png]]
+![Pasted image 20250129155041.png](/images/Pasted image 20250129155041.png)
 
 It is also important to set the viewers and editors permission accordingly, otherwise your team member in this project won't see anything on the board.
 
 3. Create a new Kanban board: `Your work > Boards > View all boards > Create board > Create a Kanban board > Board from an existing Saved Filter > Create board` 
 
-![[Pasted image 20250129160145.png]]
+![Pasted image 20250129160145.png](/images/Pasted image 20250129160145.png)
 
 > [!warning] Select your personal user for `Location`, as you can not select other project types than Jira Software projects - but that's ok in this workaround
 
 The result will be this new board, which we can configure now as we are used to from classical Jira Software projects:
 
-![[Pasted image 20250129160712.png]]
+![Pasted image 20250129160712.png](/images/Pasted image 20250129160712.png)
 
 > [!NOTE] One more note to this workaround:
 > This board won't show up per default in your business project, but you can add a shortcut to it in your project menu bar: 
 > 
-> ![[Pasted image 20250129161305.png]]
+> ![Pasted image 20250129161305.png](/images/Pasted image 20250129161305.png)
 
 ## Summary
 
