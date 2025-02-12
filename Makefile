@@ -5,7 +5,7 @@ PYTHON = $(PYTHON_VENV)/Scripts/python.exe
 
 # Create virtual environment if it does not exist
 $(PYTHON):
-	python -m venv $(PYTHON_VENV)
+	python3 -m venv $(PYTHON_VENV)
 
 sync:
 	@echo "Sync posts ..."
@@ -24,6 +24,11 @@ clean:
 	@echo "Cleaning up..."
 
 python: $(PYTHON)
+ifeq ($(OS),Windows_NT)
+	@echo "Running on Windows"
 	@$(PYTHON) python/sync.py
+else
+	@echo "Running on macOS or Linux"
+endif
 
 .PHONY: sync clean python
