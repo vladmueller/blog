@@ -33,6 +33,17 @@ def transform_wiki_links(p_content):
     )
 
 
+def transform_image_links(p_content):
+    """
+    Replace ![[image.png]] with ![image.png](/images/image.png)
+    """
+    return re.sub(
+        r'!\[\[(.*?)\]\]',
+        lambda match: f"![{match.group(1)}](/images/{match.group(1)})",
+        p_content
+    )
+
+
 # Ensure the directory exists
 if not os.path.isdir(HUGO_POSTS):
     raise FileNotFoundError(f"Directory not found: {HUGO_POSTS}")
@@ -43,7 +54,9 @@ for md_file in md_files:
     with open(md_file, "r", encoding="utf-8") as f:
         content = f.read()
 
-    updated_content = transform_wiki_links(content)
+    # NOTE: The order is important here
+    updated_content = transform_image_links(content)
+    updated_content = transform_wiki_links(updated_content)
 
     # Write the updated content back to the file
     with open(md_file, "w", encoding="utf-8") as f:
