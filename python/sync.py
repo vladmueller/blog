@@ -22,6 +22,17 @@ def to_kebab_case(title):
     return re.sub(r'[^a-zA-Z0-9]+', '-', title.strip().lower()).strip('-')
 
 
+def transform_wiki_links(p_content):
+    """
+    Replace [[Title]] with [Title](/posts/title-in-kebab-case)
+    """
+    return re.sub(
+        r'\[\[(.*?)\]\]',
+        lambda match: f"[{match.group(1)}](/posts/{to_kebab_case(match.group(1))})",
+        p_content
+    )
+
+
 # Ensure the directory exists
 if not os.path.isdir(HUGO_POSTS):
     raise FileNotFoundError(f"Directory not found: {HUGO_POSTS}")
@@ -32,12 +43,7 @@ for md_file in md_files:
     with open(md_file, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Replace [[Title]] with [Title](/posts/title-in-kebab-case)
-    updated_content = re.sub(
-        r'\[\[(.*?)\]\]',
-        lambda match: f"[{match.group(1)}](/posts/{to_kebab_case(match.group(1))})",
-        content
-    )
+    updated_content = transform_wiki_links(content)
 
     # Write the updated content back to the file
     with open(md_file, "w", encoding="utf-8") as f:
