@@ -1,5 +1,12 @@
 include .env
 
+PYTHON_VENV = python/venv
+PYTHON = $(PYTHON_VENV)/Scripts/python.exe
+
+# Create virtual environment if it does not exist
+$(PYTHON):
+	python -m venv $(PYTHON_VENV)
+
 sync:
 	@echo "Sync posts ..."
 ifeq ($(OS),Windows_NT)
@@ -16,4 +23,7 @@ endif
 clean:
 	@echo "Cleaning up..."
 
-.PHONY: sync clean
+python: $(PYTHON)
+	@$(PYTHON) python/sync.py
+
+.PHONY: sync clean python
