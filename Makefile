@@ -1,7 +1,12 @@
 include .env
 
 PYTHON_VENV = python/venv
-PYTHON = $(PYTHON_VENV)/Scripts/python.exe
+
+ifeq ($(OS),Windows_NT)
+    PYTHON = $(PYTHON_VENV)/Scripts/python.exe
+else
+    PYTHON = $(PYTHON_VENV)/bin/python
+endif
 
 # Create virtual environment if it does not exist
 $(PYTHON):
@@ -24,11 +29,7 @@ clean:
 	@echo "Cleaning up..."
 
 python: $(PYTHON)
-ifeq ($(OS),Windows_NT)
-	@echo "Running on Windows"
+	@echo "Running Python script"
 	@$(PYTHON) python/sync.py
-else
-	@echo "Running on macOS or Linux"
-endif
 
 .PHONY: sync clean python
