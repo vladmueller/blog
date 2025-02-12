@@ -1,5 +1,7 @@
 import os
 import glob
+import re
+
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -15,18 +17,32 @@ print("OBSIDIAN_POSTS_RESOURCES:", OBSIDIAN_POSTS_RESOURCES)
 print("HUGO_POSTS:", HUGO_POSTS)
 print("HUGO_POSTS_RESOURCES:", HUGO_POSTS_RESOURCES)
 
+
+def to_kebab_case(title):
+    return re.sub(r'[^a-zA-Z0-9]+', '-', title.strip().lower()).strip('-')
+
+
 # Ensure the directory exists
 if not os.path.isdir(HUGO_POSTS):
     raise FileNotFoundError(f"Directory not found: {HUGO_POSTS}")
 
 md_files = glob.glob(os.path.join(HUGO_POSTS, "*.md"))
 
-# Print the list of Markdown files
-for md_file in md_files:
-    print(f"Found: {md_file}")
-
-# Optionally, read each file's content
 for md_file in md_files:
     with open(md_file, "r", encoding="utf-8") as f:
         content = f.read()
-        print(f"Contents of {md_file} (first 100 chars):\n{content[:100]}...\n")
+
+    # Replace [[Title]] with [Title](/posts/title-in-kebab-case)
+    updated_content = re.sub(
+        r'\[\[(.*?)\]\]',
+        lambda match: f"[{match.group(1)}](/posts/{to_kebab_case(match.group(1))})",
+        content
+    )
+
+    # Write the updated content back to the file
+    with open(md_file, "w", encoding="utf-8") as f:
+        f.write(updated_content)
+
+    print(f"Updated: {md_file}")
+
+print("✅ All markdown files have been processed.")
