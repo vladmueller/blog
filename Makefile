@@ -8,9 +8,13 @@ else
     PYTHON = $(PYTHON_VENV)/bin/python
 endif
 
-# Create virtual environment if it does not exist
+# Create virtual environment if it does not exist and install dependencies
 $(PYTHON):
 	python3 -m venv $(PYTHON_VENV)
+	$(PYTHON) -m pip install --upgrade pip
+ifneq ("$(wildcard python/requirements.txt)", "")
+	$(PYTHON) -m pip install -r python/requirements.txt
+endif
 
 sync:
 	@echo "Sync posts ..."
