@@ -2,7 +2,6 @@
 date: 2025-02-12
 title: Jira Notification Best Practices
 description: TODO
-toc: false
 draft: true
 tags:
   - draft

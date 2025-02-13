@@ -3,7 +3,6 @@ date: 2025-02-11
 title: Example Post
 description: This post is for demo purposes
 tldr: Example 123
-toc: false
 draft: true
 tags:
   - draft

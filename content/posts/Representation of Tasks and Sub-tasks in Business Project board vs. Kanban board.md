@@ -2,7 +2,6 @@
 date: 2025-01-30
 title: Representation of Tasks and Sub-tasks in Business Project board vs. Kanban board
 description: TODO
-toc: false
 draft: true
 tags:
   - draft
