@@ -8,7 +8,7 @@ tags:
 
 ## Comparison between Business board vs. Kanban board
 
-![[Pasted image 20250130092706.png]]
+![business-board-vs-kanban-board.png](/images/business-board-vs-kanban-board.png)
 
 **On Business Project board**: Sub-tasks are displayed in the `In Progress` column in a tree structure, but actually they are in Status `To Do`. The parent-child relation is visible.
 
