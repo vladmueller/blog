@@ -1,19 +1,21 @@
 ---
-title: No Board configuration in Jira Cloud Business Projects
 date: 2025-01-29
-draft: true
+title: No Board configuration in Jira Cloud Business Projects
+description: Workaround for missing board configuration in Jira business projects
+toc: true
+draft: false
 tags:
   - atlassian
   - jira
   - problem
-  - draft
 ---
 
 ## Problem 
 
-You want track some tasks and work which has to be done ..
-introduce a higher level hierarchy
-but then you realize that you can not configure the board
+You created a business project and want to track some tasks and work which has to be done.
+At some point you want to add new columns, hide or display certain issue types.
+But then you realise, that you can not configure the board in a business project.
+Also you can not view different issue types on the board, if they have different workflows underneath. 
 
 ![jira-cloud-no-board-configuration-in-jira-workmanagement-projects.png](/images/jira-cloud-no-board-configuration-in-jira-workmanagement-projects.png)
 
@@ -31,7 +33,7 @@ Create a second Kanban board manually and create a link to it in your business p
 1. Create a new filter: `Filters > View all filters > Create filter` 
    Type in the following JQL: `project = <YOUR-PROJECT_KEY> ORDER BY Rank ASC`
 
-> Note to `Rank`: **TODO**
+> Note to `Rank`: The `ORDER BY Rank` is important for filters, which are used for boards. This fields reflects the position and relative importance of each ticket on the board.
 
 ![jira-cloud-no-board-configuration-1.png](/images/jira-cloud-no-board-configuration-1.png)
 
@@ -59,13 +61,3 @@ The result will be this new board, which we can configure now as we are used to 
 ## Summary
 
 If you know in first place, that you are going to use many boards with flexible configurations, which should live under the same project, then you might consider to create a Jira Software project, even when the tasks/issues are more business and less software related (just remove not need issue types `Story`, `Bug` etc.) ✌
-
-
-
-
-
----
-
-- [How to access Board Settings IN Work Management Pr...](https://community.atlassian.com/t5/Jira-questions/How-to-access-Board-Settings-IN-Work-Management-Project/qaq-p/2340344)
-- [Creating a Second Agile Board for Team-Managed or ... - Atlassian Community](https://community.atlassian.com/t5/Jira-articles/Creating-a-Second-Agile-Board-for-Team-Managed-or-JIra-Work/ba-p/2115018)
-- [Solved: How do I create an empty project?](https://community.atlassian.com/t5/Jira-questions/How-do-I-create-an-empty-project/qaq-p/2906807)

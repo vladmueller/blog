@@ -1,6 +1,7 @@
 ---
-title: Always use company-managed projects in Jira Cloud
 date: 2025-01-30
+title: Always use company-managed projects in Jira Cloud
+description: TODO
 draft: true
 tags:
   - atlassian
@@ -9,5 +10,4 @@ tags:
   - draft
 ---
 
-> [!warning] #todo 
-
+> [!warning] #todo

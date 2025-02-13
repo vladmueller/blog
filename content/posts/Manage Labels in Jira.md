@@ -1,12 +1,14 @@
 ---
-title: Manage Labels in Jira
 date: 2025-02-12
+title: Manage Labels in Jira
+description: TODO
 draft: true
 tags:
   - draft
 ---
 
 - [collectivemind.atlassian.net/rest/api/3/label](https://collectivemind.atlassian.net/rest/api/3/label)
+- https://collectivemind.atlassian.net/rest/api/2/search?jql=&fields=labels
 
 How to delete a Label -> [Delete a label in Jira | Jira | Atlassian Documentation](https://confluence.atlassian.com/jirakb/how-to-delete-a-label-in-jira-297667646.html)
 
