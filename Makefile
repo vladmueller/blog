@@ -33,7 +33,7 @@ endif
 
 python: $(PYTHON)
 	@echo "Running Python script"
-	@$(PYTHON) python/sync.py
+	@$(PYTHON) python/transform.py
 
 
 clean:
