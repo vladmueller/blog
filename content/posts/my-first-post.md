@@ -29,4 +29,4 @@ Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ame
 
 ![red-apple-1544181_1280.jpg](/images/red-apple-1544181_1280.jpg)
 
-See a problem and solution here: [[Jira Advanced Roadmaps - Can not see issue (ticket)#Suspicion 3 Status is done and resolution field is set, but resolved date is empty]]
+See a problem and solution here: [Jira Advanced Roadmaps - Can not see issue (ticket)#Suspicion 3 Status is done and resolution field is set, but resolved date is empty](/posts/jira-advanced-roadmaps-can-not-see-issue-ticket-suspicion-3-status-is-done-and-resolution-field-is-set-but-resolved-date-is-empty)

@@ -1,6 +1,8 @@
 ---
-title: No Board configuration in Jira Cloud Business Projects
 date: 2025-01-29
+title: No Board configuration in Jira Cloud Business Projects
+description: TODO
+toc: true
 draft: true
 tags:
   - atlassian
