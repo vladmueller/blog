@@ -1,6 +1,7 @@
 ---
 title: 'About me'
 date: 2025-02-13
+layout: 'about'
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
