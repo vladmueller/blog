@@ -33,7 +33,9 @@ Create a second Kanban board manually and create a link to it in your business p
 1. Create a new filter: `Filters > View all filters > Create filter` 
    Type in the following JQL: `project = <YOUR-PROJECT_KEY> ORDER BY Rank ASC`
 
-> Note to `Rank`: The `ORDER BY Rank` is important for filters, which are used for boards. This fields reflects the position and relative importance of each ticket on the board.
+> Note to `Rank`: The `ORDER BY Rank ASC` is important for filters, which are used for boards. This fields reflects the position and relative importance of each ticket on the board.
+>  
+> If you use something other than `ORDER BY Rank ASC`, the issue is automatically ranked based on the filter query of your board [^1].
 
 ![jira-cloud-no-board-configuration-1.png](/images/jira-cloud-no-board-configuration-1.png)
 
