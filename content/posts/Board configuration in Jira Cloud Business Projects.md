@@ -1,7 +1,7 @@
 ---
 date: 2025-01-29
 title: No Board configuration in Jira Cloud Business Projects
-description: TODO
+description: Workaround for missing board configuration in Jira business projects
 toc: true
 draft: false
 tags:
