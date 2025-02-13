@@ -30,4 +30,4 @@ Variante 3: Combine both approaches
 
 - [How to Set Up the Perfect Jira Notification Scheme - Idalko](https://idalko.com/jira-notification-scheme/)
 - [Mastering Notifications in Jira - Atlassian Community](https://community.atlassian.com/t5/App-Central-articles/Mastering-Notifications-in-Jira/ba-p/2667471)
-- 
+-

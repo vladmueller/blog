@@ -11,4 +11,3 @@ tags:
 ## This is an example post 
 
 [Board configuration in Jira Cloud Business Projects](/posts/board-configuration-in-jira-cloud-business-projects)
-
