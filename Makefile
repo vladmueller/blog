@@ -34,6 +34,7 @@ endif
 python: $(PYTHON)
 	@echo "Running Python script"
 	@$(PYTHON) python/transform.py
+	@$(PYTHON) python/strip.py
 
 
 clean:
