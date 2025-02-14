@@ -2,9 +2,8 @@
 date: 2025-02-14
 title: Imports in Python are executed immediately
 description: Beware that Python executes code from imports directly
-draft: true
+draft: false
 tags:
-  - draft
   - python
   - unexpected-behavior
 ---
