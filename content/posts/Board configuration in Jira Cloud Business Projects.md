@@ -43,7 +43,7 @@ Create a second Kanban board manually and create a link to it in your business p
 
 ![jira-cloud-no-board-configuration-2.png](/images/jira-cloud-no-board-configuration-2.png)
 
-It is also important to set the viewers and editors permission accordingly, otherwise your team member in this project won't see anything on the board.
+It is also important to set the viewers and editors permission accordingly, otherwise your team members in this project won't see anything on the board.
 
 3. Create a new Kanban board: `Your work > Boards > View all boards > Create board > Create a Kanban board > Board from an existing Saved Filter > Create board` 
 
