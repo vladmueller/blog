@@ -10,4 +10,4 @@ tags:
 
 ## This is an example post 
 
-[2025-01-29 Board configuration in Jira Cloud Business Projects](/posts/2025-01-29-board-configuration-in-jira-cloud-business-projects)
+[Board configuration in Jira Cloud Business Projects](/posts/2025-01-29-board-configuration-in-jira-cloud-business-projects)
