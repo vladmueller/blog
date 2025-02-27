@@ -1,10 +1,14 @@
 ---
 date: 2025-02-27
 title: Create and use Project Templates in Jira for your Project Types
-description: TODO
+description: TODO maintenance
 draft: true
 tags:
-  - draft
+  - atlassian
+  - jira
+  - best-practices
+  - jira-administration
+  - project-management
 ---
 
 ## Create a template for your projects types
@@ -19,28 +23,28 @@ tags:
 
 ![jira-template-work-management-blank-project.png](/images/jira-template-work-management-blank-project.png)
 
-1. Click on `Show more` and select `Company-managed` project with key `PMTEMPLATE`
+3. Click on `Show more` and select `Company-managed` project with key `PMTEMPLATE`
    and for Name: "Template Project Management"
 
 ![jira-template-blank-business-project-use-company-managed.png](/images/jira-template-blank-business-project-use-company-managed.png)
 
-1. Click on `Create project`
+4. Click on `Create project`
 
 ### Option B: Use a software project
 
-1. (b) Select `Software development` + `Scrum` OR `Kanban` (if you want a `software project`)
+2. (b) Select `Software development` + `Scrum` OR `Kanban` (if you want a `software project`)
    and Click on `Use template`
 
 ![jira-template-use-scrum-template.png](/images/jira-template-use-scrum-template.png)
 
 > [!warning] #todo Note that a Scrum or Kanban board is not part of the template
 
-1. Select `Company-managed` project with key `PMTEMPLATE`
+3. Select `Company-managed` project with key `PMTEMPLATE`
    and for Name: "Template Project Management"
 
 ![jira-template-software-project-use-company-managed.png](/images/jira-template-software-project-use-company-managed.png)
 
-1. Click on `Create project`
+4. Click on `Create project`
 
 ![jira-template-software-project-after-creation.png](/images/jira-template-software-project-after-creation.png)
 
@@ -94,7 +98,7 @@ Or what I would recommend to have the maximum flexibility, we are going to creat
 
 Now we need to switch the *workflow scheme* which is used by our `PMTEMPLATE` project
 
-1. `Cog wheel` > `Projects` > Search for PMTEMPLATE > Click on `...` > `Project settings` > `Workflows` > `Switch scheme` > Select `PMTEMPLATE - Workflow scheme` > Click on `Associate` > `Associate` (there shouldn't be any tickets to migrate)
+6. `Cog wheel` > `Projects` > Search for PMTEMPLATE > Click on `...` > `Project settings` > `Workflows` > `Switch scheme` > Select `PMTEMPLATE - Workflow scheme` > Click on `Associate` > `Associate` (there shouldn't be any tickets to migrate)
 
 Then our initial setup for our project template should look like this:
 
@@ -107,3 +111,26 @@ Then our initial setup for our project template should look like this:
 - Define Roles for our project type
 - Set up a permission scheme for our roles
 - Create groups for each role
+
+## Use a reduced notification scheme
+
+As described in [Jira Notification Best Practices](/posts/jira-notification-best-practices), we are going to use a reduced "watcher-only" notification scheme. Otherwise Jira is very talkative, which leads to unnecessary noise.
+
+`Cog wheel` > `Projects` > Search for PMTEMPLATE > Click on `...` > `Project settings` > `Notifications` > `Settings` > Click on `Actions` > `Use a different scheme` > Select `Reduced Notification Scheme`
+
+![jira-reduced-notification-scheme-watcher-only.png](/images/jira-reduced-notification-scheme-watcher-only.png)
+
+## Define the roles for your project
+
+For a classical project management context, I would suggest the following roles:
+
+| Role            | Permissions                                                   |
+| --------------- | ------------------------------------------------------------- |
+| Project Admin   | *can access the* `Project settings` *and do everything else*  |
+| Project Manager | *can do everything but can not access the* `Project settings` |
+| User            | *can do the same as the project manager or less*              |
+| Read-only       | *can only read information and add comments*                  |
+
+We have to create our needed roles globally in the system settings:
+
+`Cog wheel` > `System` > `Project roles`
