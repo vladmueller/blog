@@ -7,6 +7,8 @@ tags:
   - draft
 ---
 
+#todo [3 Essential Ways for Product Owners to Manage BAU Without Killing Innovation | Scrum.org](https://www.scrum.org/resources/blog/3-essential-ways-product-owners-manage-bau-without-killing-innovation)
+
 - [collectivemind.atlassian.net/rest/api/3/label](https://collectivemind.atlassian.net/rest/api/3/label)
 - https://collectivemind.atlassian.net/rest/api/2/search?jql=&fields=labels
 
@@ -27,3 +29,6 @@ How to delete a Label -> [Delete a label in Jira | Jira | Atlassian Documentatio
 6. Click on `Next`
 7. Click on `Confirm`
 8. Click on `Acknowledge`
+
+
+#todo All labels which are found are also used. There are not "unsed" labels.

@@ -20,3 +20,8 @@ I was unaware of this, and it led to unexpected side effects in my Python script
 ## Solution
 
 > [!tip] To avoid side effects, only define functions and methods in the Python files you intend to import.
+
+## Hidden
+
+- #consume [5 Good Python Habits - YouTube](https://www.youtube.com/watch?v=I72uD8ED73U)
+- #consume [5 Ways To Improve Any Function in Python - YouTube](https://www.youtube.com/watch?v=7m_jcy_CR7w)
