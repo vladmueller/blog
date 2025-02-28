@@ -24,12 +24,12 @@ tags:
 
 ![jira-template-work-management-blank-project.png](/images/jira-template-work-management-blank-project.png)
 
-**3**: Click on `Show more` and select `Company-managed` project with key `PMTEMPLATE`
+**3a**: Click on `Show more` and select `Company-managed` project with key `PMTEMPLATE`
    and for Name: "Template Project Management"
 
 ![jira-template-blank-business-project-use-company-managed.png](/images/jira-template-blank-business-project-use-company-managed.png)
 
-**4**: Click on `Create project`
+**4a**: Click on `Create project`
 
 ### Option B: Use a software project
 
@@ -40,12 +40,12 @@ and Click on `Use template`
 
 > [!warning] #todo Note that a Scrum or Kanban board is not part of the template
 
-**3**: Select `Company-managed` project with key `PMTEMPLATE`
+**3b**: Select `Company-managed` project with key `PMTEMPLATE`
    and for Name: "Template Project Management"
 
 ![jira-template-software-project-use-company-managed.png](/images/jira-template-software-project-use-company-managed.png)
 
-**4**: Click on `Create project`
+**4b**: Click on `Create project`
 
 ![jira-template-software-project-after-creation.png](/images/jira-template-software-project-after-creation.png)
 
