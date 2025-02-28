@@ -9,6 +9,7 @@ tags:
   - best-practices
   - jira-administration
   - project-management
+  - cloud
 ---
 
 ## Create a template for your projects types
@@ -106,11 +107,11 @@ Then our initial setup for our project template should look like this:
 
 ## Next steps
 
-- Adjust our workflows for each issue type
 - Use another notification scheme, which uses [Jira Notification Best Practices](/posts/jira-notification-best-practices)
 - Define Roles for our project type
-- Set up a permission scheme for our roles
 - Create groups for each role
+- Set up a permission scheme for our roles
+- Adjust our workflows for each issue type
 
 ## Use a reduced notification scheme
 
@@ -134,3 +135,38 @@ For a classical project management context, I would suggest the following roles:
 We have to create our needed roles globally in the system settings:
 
 `Cog wheel` > `System` > `Project roles`
+
+### Create groups based on our roles
+
+For each role we are going to create a group in our directory with the following convention:
+
+```
+JIRA_<PROJECT-KEY>_<ROLE>s
+```
+
+So for our template project, this will result in these groups:
+
+- `JIRA_PMTEMPLATE_PROJECT_ADMINS`
+- `JIRA_PMTEMPLATE_PROJECT_MANAGERS`
+- `JIRA_PMTEMPLATE_USERS`
+- `JIRA_PMTEMPLATE_READ_ONLY`
+
+### Assign groups and roles
+
+> [!tip] Each role is assigned exactly one group in the project settings
+
+![jira-assign-each-role-to-one-group.png](/images/jira-assign-each-role-to-one-group.png)
+
+## Create a permission scheme
+
+Check which *permission scheme* is used by our template project and make a copy of it:
+
+- `Cog wheel` > `Issues` > `Permission schemes`, find `Default software scheme` and click on `Copy`
+- Then find `Copy of Default software scheme` and click on `Edit`
+- Rename it to `PMTEMPLATE - Permission scheme`
+
+Then navigate to the `Project settings` of our template project > `Permissions` > `Actions` > `Use a different scheme` > Select `PMTEMPLATE - Permission scheme`
+
+Adjust the permission scheme based on our roles, which could look something like this:
+
+![jira-template-permission-scheme.png](/images/jira-template-permission-scheme.png)
