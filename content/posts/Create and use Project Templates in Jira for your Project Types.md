@@ -14,38 +14,38 @@ tags:
 
 ## Create a template for your projects types
 
-1. `Projects` > `Create project` 
+**1**: `Projects` > `Create project` 
 
 > [!warning] #todo Explain and link to difference between business and software project
 
 ### Option A: Use a business project
 
-2. (a) Select `Work management` + `Blank project` (if you want a *business project*)
+**2a**: Select `Work management` + `Blank project` (if you want a *business project*)
 
 ![jira-template-work-management-blank-project.png](/images/jira-template-work-management-blank-project.png)
 
-3. Click on `Show more` and select `Company-managed` project with key `PMTEMPLATE`
+**3**: Click on `Show more` and select `Company-managed` project with key `PMTEMPLATE`
    and for Name: "Template Project Management"
 
 ![jira-template-blank-business-project-use-company-managed.png](/images/jira-template-blank-business-project-use-company-managed.png)
 
-4. Click on `Create project`
+**4**: Click on `Create project`
 
 ### Option B: Use a software project
 
-2. (b) Select `Software development` + `Scrum` OR `Kanban` (if you want a `software project`)
-   and Click on `Use template`
+**2b**: Select `Software development` + `Scrum` OR `Kanban` (if you want a `software project`)
+and Click on `Use template`
 
 ![jira-template-use-scrum-template.png](/images/jira-template-use-scrum-template.png)
 
 > [!warning] #todo Note that a Scrum or Kanban board is not part of the template
 
-3. Select `Company-managed` project with key `PMTEMPLATE`
+**3**: Select `Company-managed` project with key `PMTEMPLATE`
    and for Name: "Template Project Management"
 
 ![jira-template-software-project-use-company-managed.png](/images/jira-template-software-project-use-company-managed.png)
 
-4. Click on `Create project`
+**4**: Click on `Create project`
 
 ![jira-template-software-project-after-creation.png](/images/jira-template-software-project-after-creation.png)
 
