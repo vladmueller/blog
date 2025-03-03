@@ -12,6 +12,13 @@ tags:
   - cloud
 ---
 
+It is a good practice to create project templates for you different project types, which you are going to use. This way you don't have to create every new project from scratch and every new project follows a standardized structure which helps to avoid wild growth of elements in Jira and reduces maintenance effort in the future.
+
+> [!tip] Remember to follow these two rules, regardless of what you are doing in Jira:
+> 
+> - **#1 Less is more**
+> - **#2 Always use Company-managed projects**
+
 ## Create a template for your projects types
 
 **1**: `Projects` > `Create project` 
@@ -38,7 +45,7 @@ and Click on `Use template`
 
 ![jira-template-use-scrum-template.png](/images/jira-template-use-scrum-template.png)
 
-> [!warning] #todo Note that a Scrum or Kanban board is not part of the template
+> [!note] Although we have to select a Scrum or Kanban board setup here, it will not be part of the template -  this means, if we create a new project from our template, we have to create the Kanban or Scrum board manually again.
 
 **3b**: Select `Company-managed` project with key `PMTEMPLATE`
    and for Name: "Template Project Management"
@@ -80,7 +87,7 @@ For *Screen schemes* we follow this naming convention:
 
 For Workflows and Workflow Schemes it is a bit more tricky - we could either use the **Simplified Workflow** and just rename it according to our naming convention:
 
-> [!warning] #todo Explain Simplified Workflows
+> [!note] [What is a simplified Jira workflow? | Jira Cloud | Atlassian Support](https://support.atlassian.com/jira-software-cloud/docs/what-is-a-simplified-jira-workflow/)
 
 - `PMTEMPLATE: Software Simplified Workflow Scheme` -> `PMTEMPLATE - Workflow Scheme`
 - `Software Simplified Workflow for Project PMTEMPLATE` -> `PMTEMPLATE - Simplified - Workflow`
@@ -153,7 +160,7 @@ So for our template project, this will result in these groups:
 
 ### Assign groups and roles
 
-> [!tip] Each role is assigned exactly one group in the project settings
+> [!tip] Each role is assigned to exactly one group in the project settings
 
 ![jira-assign-each-role-to-one-group.png](/images/jira-assign-each-role-to-one-group.png)
 
