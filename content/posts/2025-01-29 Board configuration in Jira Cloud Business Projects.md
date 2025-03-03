@@ -8,6 +8,7 @@ tags:
   - atlassian
   - jira
   - problem
+  - agile
 ---
 
 ## Problem 
