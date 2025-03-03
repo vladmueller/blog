@@ -2,7 +2,7 @@
 date: 2025-02-27
 title: Create and use Project Templates in Jira for your Project Types
 description: TODO maintenance
-draft: true
+draft: false
 tags:
   - atlassian
   - jira
