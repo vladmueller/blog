@@ -10,6 +10,7 @@ tags:
   - jira-administration
   - project-management
   - cloud
+  - agile
 ---
 
 It is a good practice to create project templates for you different project types, which you are going to use. This way you don't have to create every new project from scratch and every new project follows a standardized structure which helps to avoid wild growth of elements in Jira and reduces maintenance effort in the future.
@@ -177,3 +178,25 @@ Then navigate to the `Project settings` of our template project > `Permissions` 
 Adjust the permission scheme based on our roles, which could look something like this:
 
 ![jira-template-permission-scheme.png](/images/jira-template-permission-scheme.png)
+
+## Create your new project from template
+
+**1**: `Projects` > Click on `Create project` > Select `Software development` > Select `Scrum` > Click on `Use template` > Click on `Select a company-managed project` > Check `Select an existing project to share settings with` + select `PMTEMPLATE`
+
+![jira-create-project-share-settings-with-template.png](/images/jira-create-project-share-settings-with-template.png)
+
+**2**: Click on `Next`
+
+Then we get a new project, which has our standardized configuration for *Issue types*, *Workflows*, *Screens*, *Permissions* and *Notifications*
+
+![jira-project-created-from-pmtemplate.png](/images/jira-project-created-from-pmtemplate.png)
+
+
+> [!NOTE] Note that we have to adjust the User & Roles (People) under `Project settings` according to the roles we are using in our *Permission scheme*.
+
+| Group                              | Role            |
+| ---------------------------------- | --------------- |
+| `JIRA_EXCELLENCE_PROJECT_ADMINS`   | Project Admin   |
+| `JIRA_EXCELLENCE_PROJECT_MANAGERS` | Project Manager |
+| `JIRA_EXCELLENCE_USERS`            | User            |
+| `JIRA_EXCELLENCE_READ_ONLY`        | Read-only       |
