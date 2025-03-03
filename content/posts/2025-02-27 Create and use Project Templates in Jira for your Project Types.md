@@ -1,7 +1,7 @@
 ---
 date: 2025-02-27
 title: Create and use Project Templates in Jira for your Project Types
-description: TODO maintenance
+description: Use project templates for your project types to avoid wild growth of elements in Jira and reduce maintenance effort in the future
 draft: false
 tags:
   - atlassian
