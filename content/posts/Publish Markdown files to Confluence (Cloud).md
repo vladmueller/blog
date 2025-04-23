@@ -4,7 +4,13 @@ title: Publish Markdown files to Confluence (Cloud)
 description: TODO
 draft: true
 tags:
-  - draft
+  - atlassian
+  - confluence
+  - productivity
+  - documentation
+  - doc-as-code
+  - tool-evaluation
+  - markdown
 ---
 
 - [markdown-confluence/markdown-confluence: Publish your Markdown Files to Confluence](https://github.com/markdown-confluence/markdown-confluence)
